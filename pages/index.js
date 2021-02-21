@@ -1,5 +1,6 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -15,9 +16,32 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-          Get started by editing{' '}
+          Get started by editing{" "}
           <code className={styles.code}>pages/index.js</code>
         </p>
+
+        <div className={styles.grid}>
+          <Link href="/read-csv">
+            <a className={styles.card}>
+              <h3>Read csv &rarr;</h3>
+              <p>Read csv sample.</p>
+            </a>
+          </Link>
+
+          <Link href="/read-xml">
+            <a className={styles.card}>
+              <h3>Read xml &rarr;</h3>
+              <p>Read xml sample.</p>
+            </a>
+          </Link>
+
+          <Link href="/read-json">
+            <a className={styles.card}>
+              <h3>Read json &rarr;</h3>
+              <p>Read json sample.</p>
+            </a>
+          </Link>
+        </div>
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
@@ -56,10 +80,10 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
         </a>
       </footer>
     </div>
-  )
+  );
 }
